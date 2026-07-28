@@ -103,3 +103,20 @@ body{
     }
 
 }
+
+.loader{
+    width:52px;
+    height:52px;
+    border:4px solid rgba(255,255,255,.2);
+    border-top-color:#ffffff;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
