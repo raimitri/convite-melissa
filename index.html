@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save the Date</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Save the Date</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div id="cover">
-        <img src="capa.jpg" alt="Save the Date" id="coverImage">
-    </div>
+<div id="cover">
+    <img src="capa.jpg" alt="Save the Date">
+</div>
 
-    <video
-        id="video"
-        playsinline
-        webkit-playsinline
-        preload="auto">
-        <source src="convite.mp4" type="video/mp4">
-    </video>
+<video
+    id="video"
+    preload="auto"
+    playsinline
+    webkit-playsinline
+    controlslist="nodownload"
+>
+    <source src="convite.mp4" type="video/mp4">
+</video>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
