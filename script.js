@@ -1,6 +1,7 @@
 const loading = document.getElementById("loading");
 const cover = document.getElementById("cover");
 const video = document.getElementById("video");
+const coverVideo = document.getElementById("coverVideo");
 
 let started = false;
 
@@ -18,16 +19,25 @@ setTimeout(() => {
 cover.addEventListener("click", async () => {
 
     if (started) return;
+
     started = true;
 
+    // Para o vídeo da capa
+    coverVideo.pause();
+
+    // Mostra o vídeo principal
     video.classList.add("show");
-    cover.classList.add("hide");
 
     try {
         await video.play();
     } catch (err) {
         console.log(err);
     }
+
+    // Esconde a capa após iniciar o vídeo
+    setTimeout(() => {
+        cover.classList.add("hide");
+    }, 150);
 
 });
 
