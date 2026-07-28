@@ -1,22 +1,24 @@
 const cover = document.getElementById("cover");
 const video = document.getElementById("video");
 
-cover.addEventListener("click", async () => {
-    // Esconde a imagem
-    cover.classList.add("hidden");
+let started = false;
 
-    // Mostra o vídeo
+cover.addEventListener("click", () => {
+
+    if(started) return;
+
+    started = true;
+
     video.classList.add("show");
 
-    // Inicia o vídeo
-    try {
-        await video.play();
-    } catch (e) {
-        console.log(e);
-    }
+    video.play();
+
+    setTimeout(()=>{
+        cover.classList.add("hidden");
+    },200);
+
 });
 
-// Quando o vídeo terminar, ele permanece no último frame
 video.addEventListener("ended", () => {
     video.pause();
 });
